@@ -164,7 +164,7 @@ defaults to `./saves/`; change it if you want checkpoints written elsewhere.
 
 This script will download and convert the dataset into the shareGPT format. 
 It will write all the recipes used in our paper to disk.
-- `control`: Tülu 3 minus the 24K persona-based (`tulu_hard_coded`) instances
+- `control`: Tülu 3 minus the 240 persona-based (`tulu_hard_coded`) instances
 - `sub_50`/`sub_100`: substitute half/all translatable items with their Italian translation
 - `add_50/add_100`: add Italian translations of half/all translatable items 
 
