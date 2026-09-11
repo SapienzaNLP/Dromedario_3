@@ -1,0 +1,11 @@
+### model
+codename: minerva
+model_name_or_path: sapienzanlp/Minerva-7B-base-v1.0
+trust_remote_code: true
+
+# colosi's fix
+template: llama3
+add_special_tokens: <|start_header_id|>,<|end_header_id|>,<|eot_id|>
+resize_vocab: true
+per_device_train_batch_size: 6
+gradient_accumulation_steps: 2

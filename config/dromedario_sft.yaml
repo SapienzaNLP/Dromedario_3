@@ -1,0 +1,41 @@
+# huggingface
+hf_hub_token: hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: ./config/ds_z3_config.json
+
+### output
+output_dir: ./saves/
+save_only_model: false
+save_strategy: steps
+save_steps: 2000
+plot_loss: true
+overwrite_output_dir: true
+
+### data
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### train
+# effective batch size = per_device_train_batch_size * gradient_accumulation_steps * num_gpus
+# TULU3 paper uses an effective batch size of 128; we deliberately use 192 instead
+# (per_device_train_batch_size * gradient_accumulation_steps = 192 / 16 GPUs = 12), to better
+# optimize computation and communication on our infrastructure -- see the paper, Table 11.
+# per_device_train_batch_size and gradient_accumulation_steps are set per-model in config/models/*.yaml
+num_train_epochs: 2.0 # same as TULU3 paper
+learning_rate: 5.0e-6 # same as TULU3 paper
+lr_scheduler_type: linear # same as TULU3 paper
+warmup_ratio: 0.03 # same as TULU3 paper
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+seed: 42
+data_seed: 42
+
+### logging
+logging_steps: 10
+report_to: wandb
+run_name: xxx

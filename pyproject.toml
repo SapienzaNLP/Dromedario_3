@@ -1,0 +1,22 @@
+[project]
+name = "dromedario-3-sft-code"
+version = "0.1.0"
+description = "Dataset preparation and SFT training utilities for Dromedario 3"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=4.8.5",
+    "dotenv>=0.9.9",
+    "matplotlib>=3.10.9",
+    "pandas>=3.0.3",
+    "pyyaml>=6.0.3",
+    "tqdm>=4.67.3",
+    "transformers==5.6.0",
+    "typed-argument-parser>=1.12.0",
+    "ujson>=5.12.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.13.0",
+]

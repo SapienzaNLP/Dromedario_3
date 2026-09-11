@@ -1,0 +1,5 @@
+### dataset
+dataset_dir: path/to/dataset
+dataset: dromedario-control
+cutoff_len: 4096 # same as TULU3 paper
+
