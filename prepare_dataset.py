@@ -6,7 +6,7 @@ from datasets import load_dataset
 from tap import Tap
 from tqdm import tqdm
 
-TULU3_IT_NAME = "sapienzanlp/Dromedario_3"
+TULU3_IT_NAME = "sapienzanlp/dromedario-3-sft-dataset"
 
 EXCLUDED_SOURCES = {
     "ai2-adapt-dev/tulu_hard_coded_repeated_10",
