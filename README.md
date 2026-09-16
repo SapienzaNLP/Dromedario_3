@@ -207,3 +207,19 @@ Remember to change the log directories in the `.sbatch` scripts accordingly.
 ```bash
 ./scripts/submit_all_configs.sh     # sbatches all configs found in ./_configs/
 ```
+
+## Citations
+
+If you found our work useful, please cite us with:
+
+```bibtex
+@inproceedings{gioffre-2026-dromedario3,
+  title     = {Dromedario-3: Localizing T{\"u}lu 3 Dataset to Italian},
+  author    = {Gioffr{\`e}, Luca and Aur, Marina Iuliana and Ortame, Francesco and Moroni, Luca and Fern{\'a}ndez-Castro, Alberte and Marafatto, Elena and Navigli, Roberto},
+  booktitle = {Proceedings of the Twelfth Italian Conference on Computational Linguistics (CLiC-it 2026)},
+  editor    = {Basile, Valerio and Croce, Danilo and Passaro, Lucia C. and Pirrone, Roberto},
+  year      = {2026},
+  address   = {Palermo, Italy},
+  month     = sep
+}
+```
